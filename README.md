@@ -1,3 +1,5 @@
+Forked from [torkale/docker-jenkins](https://github.com/torkale/docker-jenkins)
+
 docker-jenkins
 ==============
 
