@@ -3,7 +3,7 @@ FROM debian:wheezy
 MAINTAINER finalcut bill@rawlinson.us
 
 RUN apt-get update
-RUN apt-get -y install wget git curl git-core sudo
+RUN apt-get -y install wget git curl git-core sudo ant
 
 RUN apt-get install -q -y openjdk-7-jre-headless
 
