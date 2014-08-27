@@ -31,7 +31,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
 RUN apt-get -qq -y install ant git curl wget git-core
 
 #necessary ant libs
-ADD ./ant/ /usr/share/ant/
+ADD ./ant/ /usr/share/ant/lib/
 
 #install jenkins
 RUN wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
@@ -40,7 +40,7 @@ RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y jenkins
 
 ENV JENKINS_HOME /var/lib/jenkins
-RUN chmod -R 777 /var/lib/jenkins/jobs/
+RUN chmod -R 777 /var/lib/jenkins/
 
 VOLUME /var/lib/jenkins
 
