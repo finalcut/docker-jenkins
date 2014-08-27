@@ -40,6 +40,7 @@ RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y jenkins
 
 ENV JENKINS_HOME /var/lib/jenkins
+RUN chmod -R 777 /var/lib/jenkins/jobs/
 
 VOLUME /var/lib/jenkins
 
@@ -51,6 +52,5 @@ EXPOSE 8080
 
 ADD run /usr/local/bin/run
 RUN chmod +x /usr/local/bin/run
-RUN chmod -R 777 /var/lib/jenkins/jobs/
 
 CMD ["/usr/local/bin/run"]
