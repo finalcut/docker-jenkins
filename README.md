@@ -1,15 +1,13 @@
-Forked from [torkale/docker-jenkins](https://github.com/torkale/docker-jenkins)
+Forked from [niaquinto/jenkins](https://github.com/niaquinto/docker-jenkins)
 
 docker-jenkins
 ==============
 
 Jenkins in a Docker container; based on Ubuntu 14.04.
 
-Includes gradle builds.
+It comes with the following jenkins plugins:
 
-It comes with the following plugins:
-
- * hipchat.hpi
+ * ant.hpi
  * greenballs.hpi
  * credentials.hpi
  * ssh-credentials.hpi
@@ -21,24 +19,28 @@ It comes with the following plugins:
  * ghprb.hpi
  * github-oauth.hpi
  * scm-api.hpi
- * postbuild-task.hpi 
- * bitbucket.hpi
- * gradle.hpi
+ * postbuild-task.hpi
+
+ Also comes with the following ant plugins
+ * ant-contrib.jar
+ * git-ant-task.jar
+ * mail.jar
+ * mxunit-ant.jar
 
 Usage
 -----
 
-    docker run -d -t niaquinto/jenkins
+    docker run -d -t finalcut/jenkins
 
 Building
 --------
 
 Grab Dockerfile from this repository on Github
 
-    docker build github.com/niaquinto/docker-jenkins
+    docker build github.com/finalcut/docker-jenkins
 
 Get a Docker image from Docker index
 
-    docker pull niaquinto/jenkins
+    docker pull finalcut/jenkins
 
 
